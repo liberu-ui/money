@@ -1,3 +1,3 @@
-import Moeny from './src/Moeny.vue';
+import Money from './src/Money.vue';
 
-export default Moeny;
+export default Money;
