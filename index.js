@@ -1,3 +1,3 @@
-import DropdownIndicator from './src/DropdownIndicator.vue';
+import Moeny from './src/Moeny.vue';
 
-export default DropdownIndicator;
+export default Moeny;
