@@ -1,0 +1,33 @@
+{
+  "name": "@enso-ui/money",
+  "version": "1.0.0",
+  "description": "Money vue component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enso-ui/money.git"
+  },
+  "keywords": [
+    "money",
+    "vue"
+  ],
+  "author": "Adrian Ocneanu <aocneanu@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enso-ui/money/issues"
+  },
+  "homepage": "https://github.com/enso-ui/money#readme",
+  "devDependencies": {
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-vue": "^5.0.0"
+  },
+  "dependencies": {
+    "accounting-js": "^1.1.1",
+    "vue": "^2.5.16"
+  }
+}
