@@ -1,22 +1,44 @@
 # Money
 
-[![License](https://poser.pugx.org/laravel-enso/money/license)](https://packagist.org/packages/laravel-enso/money)
-[![Latest Stable Version](https://poser.pugx.org/laravel-enso/money/version)](https://packagist.org/packages/laravel-enso/money)
+![npm license](https://img.shields.io/npm/l/@enso-ui/money.svg) 
+![npm download](https://img.shields.io/npm/dm/@enso-ui/money.svg) 
+![GitHub top language](https://img.shields.io/github/languages/top/enso-ui/money.svg) 
+![GitHub issues](https://img.shields.io/github/issues/enso-ui/money.svg) 
+![npm version](https://img.shields.io/npm/v/@enso-ui/money.svg) 
 
-Money vue component
+Money Vue input component
 
-### Features
+## Usage
 
-- soon
+The component can be used outside of the Enso ecosystem.
 
-### Configuration & Usage
+### Demo
 
-- soon
+For live examples and demos, you may visit [laravel-enso.com](https://www.laravel-enso.com)
 
-### Contributions
+### Installation
+
+Install the package:
+```
+npm i @enso-ui/money
+```
+Import the desired component(s):
+```js
+import Money from '@enso-ui/money';
+```
+
+## Exports
+
+`@enso-ui/money`:
+- `Money`
+
+
+## Contributions
 
 are welcome. Pull requests are great, but issues are good too.
 
-### License
+Thank you to all the people who already contributed to Enso!
 
-This package is released under the MIT license.
+## License
+
+[ISC](https://opensource.org/licenses/ISC)
