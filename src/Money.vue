@@ -8,6 +8,7 @@
         :placeholder="placeholder"
         type="tel"
         @blur="update"
+        @keydown.enter.prevent="update"
         @focus="money = value"
         ref="money"
         v-else>
