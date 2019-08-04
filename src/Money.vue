@@ -10,7 +10,7 @@
         @blur="update"
         @keydown.enter.prevent="update"
         @focus="money = value"
-        ref="money"
+        @input="$emit('input', value)"
         v-else>
 </template>
 
