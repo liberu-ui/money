@@ -16,6 +16,8 @@ The component can be used outside of the Enso ecosystem.
 
 For live examples and demos, you may visit [laravel-enso.com](https://www.laravel-enso.com)
 
+Check the full documentation at  [docs.laravel-enso.com](https://docs.laravel-enso.com).
+
 ### Installation
 
 Install the package:
@@ -31,7 +33,6 @@ import Money from '@enso-ui/money';
 
 `@enso-ui/money`:
 - `Money`
-
 
 ## Contributions
 
