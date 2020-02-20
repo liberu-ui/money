@@ -21,10 +21,17 @@
   },
   "homepage": "https://github.com/enso-ui/money#readme",
   "devDependencies": {
-    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-eslint": "^4.0.5",
+    "@vue/cli-service": "^4.0.5",
+    "@vue/eslint-config-airbnb": "^5.0.0",
+    "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.0.1",
-    "eslint-plugin-vue": "^5.0.0"
+    "cross-env": "^6.0.0",
+    "eslint": "^6.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-vue": "^6.0.0"
   },
   "dependencies": {
     "accounting-js": "^1.1.1",
