@@ -7,10 +7,10 @@
         :readonly="readonly"
         :placeholder="placeholder"
         type="tel"
-        @blur="update"
+        @blur="focus = false; update($event)"
         @keydown.enter.prevent="update"
-        @focus="money = value"
-        @input="$emit('input', value)"
+        @focus="focus = true; money = value"
+        @input="$emit('input', $event.target.value)"
         v-else>
 </template>
 
@@ -76,6 +76,7 @@ export default {
 
     data: () => ({
         money: null,
+        focus: false,
     }),
 
     watch: {
@@ -88,6 +89,10 @@ export default {
 
     methods: {
         format() {
+            if (this.focus) {
+                return;
+            }
+
             this.money = accounting.formatMoney(this.value, {
                 symbol: this.symbol,
                 precision: this.precision,
