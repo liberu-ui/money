@@ -110,10 +110,10 @@ export default {
             value = parseFloat(value);
 
             if (isNaN(value)) {
-                value = 0;
+                value = null;
+            } else {
+                value = this.round(value);
             }
-
-            value = this.round(value);
 
             this.$emit('input', value);
             this.format();
