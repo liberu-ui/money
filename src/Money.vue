@@ -9,8 +9,8 @@
         type="tel"
         @blur="focus = false; update($event)"
         @keydown.enter.prevent="update"
-        @focus="focus = true; money = value"
-        @input="$emit('input', $event.target.value)"
+        @focus="focus = true; money = modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
         v-else>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     name: 'Money',
 
     props: {
-        value: {
+        modelValue: {
             type: [Number, String],
             default: null,
         },
@@ -74,13 +74,15 @@ export default {
         },
     },
 
+    emits: ['update:modelValue'],
+
     data: () => ({
         money: null,
         focus: false,
     }),
 
     watch: {
-        value: 'format',
+        modelValue: 'format',
     },
 
     created() {
@@ -93,7 +95,7 @@ export default {
                 return;
             }
 
-            this.money = accounting.formatMoney(this.value, {
+            this.money = accounting.formatMoney(this.modelValue, {
                 symbol: this.symbol,
                 precision: this.precision,
                 thousand: this.thousand,
@@ -115,7 +117,7 @@ export default {
                 value = this.round(value);
             }
 
-            this.$emit('input', value);
+            this.$emit('update:modelValue', value);
             this.format();
         },
         round(value) {
