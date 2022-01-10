@@ -111,7 +111,7 @@ export default {
             let value = event.target.value.split(this.decimal).join('.');
             value = parseFloat(value);
 
-            if (isNaN(value)) {
+            if (Number.isNaN(value)) {
                 value = null;
             } else {
                 value = this.round(value);
