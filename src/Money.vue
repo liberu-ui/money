@@ -7,10 +7,10 @@
         :readonly="readonly"
         :placeholder="placeholder"
         type="tel"
-        @blur="focus = false; update($event)"
-        @keydown.enter.prevent="update"
+        @blur="focus = false; attemptUpdate($event)"
+        @keydown.enter.prevent="attemptUpdate"
         @focus="focus = true; money = modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="update($event.target.value)"
         v-else>
 </template>
 
@@ -90,11 +90,18 @@ export default {
     },
 
     methods: {
+        attemptUpdate(event) {
+            let value = event.target.value.split(this.decimal).join('.');
+            value = Number.parseFloat(value);
+            value = Number.isNaN(value) ? null : value;
+            this.update(value);
+            this.format();
+        },
         format() {
             if (this.focus) {
                 return;
             }
-
+            
             this.money = accounting.formatMoney(this.modelValue, {
                 symbol: this.symbol,
                 precision: this.precision,
@@ -107,22 +114,14 @@ export default {
                 },
             });
         },
-        update(event) {
-            let value = event.target.value.split(this.decimal).join('.');
-            value = parseFloat(value);
-
-            if (Number.isNaN(value)) {
-                value = null;
-            } else {
-                value = this.round(value);
-            }
-
-            this.$emit('update:modelValue', value);
-            this.format();
+        update(value){
+            this.$emit('update:modelValue', this.round(value));
         },
         round(value) {
             const factor = 10 ** this.precision;
-            return Math.round(value * factor) / factor;
+            const result = Math.round(value * factor) / factor;
+
+            return Number.parseFloat(result).toFixed(this.precision);
         },
     },
 };
