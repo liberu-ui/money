@@ -92,7 +92,7 @@ export default {
     methods: {
         attemptUpdate(event) {
             let value = event.target.value.split(this.decimal).join('.');
-            value = Number.parseFloat(value);
+            value = Number.parseFloat(value.replace(/,/g,''));
             value = Number.isNaN(value) ? null : value;
             this.update(value);
             this.format();
