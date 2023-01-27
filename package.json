@@ -1,5 +1,5 @@
 {
-  "name": "@enso-ui/money",
+  "name": "@cgdsoftware/money",
   "version": "2.0.9",
   "description": "Money vue component",
   "main": "index.js",
