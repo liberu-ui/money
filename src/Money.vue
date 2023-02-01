@@ -22,7 +22,7 @@ export default {
 
     props: {
         modelValue: {
-            type: [Number, String],
+            type: [Number, String, null],
             default: null,
         },
         label: {
@@ -114,8 +114,11 @@ export default {
                 },
             });
         },
-        update(value){
-            this.$emit('update:modelValue', this.round(value));
+        update(value) {
+            const sanitized = value === "" || value === null
+                ? null
+                : this.round(value);
+            this.$emit('update:modelValue', sanitized);
         },
         round(value) {
             const factor = 10 ** this.precision;
