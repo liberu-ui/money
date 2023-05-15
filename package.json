@@ -1,5 +1,5 @@
 {
-  "name": "@cgdsoftware/money",
+  "name": "@liberu-ui/money",
   "version": "2.0.9",
   "description": "Money vue component",
   "main": "index.js",
