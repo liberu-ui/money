@@ -1,10 +1,10 @@
 # Money
 
-![npm license](https://img.shields.io/npm/l/@enso-ui/money.svg) 
-![npm download](https://img.shields.io/npm/dm/@enso-ui/money.svg) 
-![GitHub top language](https://img.shields.io/github/languages/top/enso-ui/money.svg) 
-![GitHub issues](https://img.shields.io/github/issues/enso-ui/money.svg) 
-![npm version](https://img.shields.io/npm/v/@enso-ui/money.svg) 
+![npm license](https://img.shields.io/npm/l/@liberu-ui/money.svg) 
+![npm download](https://img.shields.io/npm/dm/@liberu-ui/money.svg) 
+![GitHub top language](https://img.shields.io/github/languages/top/liberu-ui/money.svg) 
+![GitHub issues](https://img.shields.io/github/issues/liberu-ui/money.svg) 
+![npm version](https://img.shields.io/npm/v/@liberu-ui/money.svg) 
 
 Money Vue input component
 
